@@ -6,9 +6,11 @@
  */
 int write_c(va_list arg)
 {
-	char c = va_arg(arg, int);
+	char c;
 	char *cptr;
-	cptr = &c; 
+
+	c = va_arg(arg, int);
+	cptr = &c;
 
 	_putchar(*cptr);
 	return (1);
@@ -22,10 +24,10 @@ int write_c(va_list arg)
 int write_s(va_list arg)
 {
 	int count;
+	char *str;
 
 	count = 0;
-
-	char *str = va_arg(arg, char *);
+	str = va_arg(arg, char *);
 
 	if (*str == '\0')
 	{
@@ -33,10 +35,8 @@ int write_s(va_list arg)
 	}
 	while (str[count] != '\0')
 	{
-		
 		_putchar(str[count]);
 		count++;
-		
 	}
 	return (count);
 }
@@ -48,7 +48,9 @@ int write_s(va_list arg)
  */
 int write_percent(va_list arg)
 {
-	int c = va_arg(arg, int);
-        write(1, "%%", 1);
+	/*int c;*/
+	/*c = va_arg(arg, int);*/
+	void(arg);
+	write(1, "%%", 1);
 	return (1);
 }

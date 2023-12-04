@@ -25,10 +25,18 @@ int _printf(const char *format, ...)
 		else
 		{
 			format++;
-			f = get_writer(format);
-			if (f != NULL)
+			if (format == '%')
 			{
-			count += f(varguments);
+				write(1, "%%", 1);
+				count++;
+			}
+			else
+			{
+				f = get_writer(format);
+				if (f != NULL)
+				{
+				count += f(varguments);
+				}
 			}
 		}
 		format++;

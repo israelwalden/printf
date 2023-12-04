@@ -10,7 +10,7 @@ int (*get_writer(const char *format))(va_list args)
 	{"c", write_c},
 	{"s", write_s},
 	{"%", write_percent},
-	{NULL, NULL}
+	/*{NULL, NULL}*/
 	};
 	int i;
 
