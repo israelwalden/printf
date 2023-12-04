@@ -30,5 +30,7 @@ int _putchar(char c);
 int (*get_writer(const char *format))(va_list);
 
 int write_c(va_list arg);
+int write_s(va_list arg);
+int write_%(va_list arg);
 
 #endif

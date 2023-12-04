@@ -2,10 +2,11 @@
 int main()
 {
    //int len;
-	char m = 'm';
+	//char m = 'm';
 	// len = _printf("I am %c.", m);
 	//printf("I am %c.", m);
 	//printf("%d\n",len);
-	write(1, &m,1);
+	_printf("Character:[%c]\n", 'H');
+	_printf("String:[%s]\n", "I am a string !");
     return 0;
 }

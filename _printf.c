@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			if (f != NULL)
 			{
 			/*printf("pointer is : %p", f);*/
-			f(varguments);
+			//f(varguments);
 			count += f(varguments);
 			}
 		}
