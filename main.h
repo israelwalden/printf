@@ -23,6 +23,7 @@ typedef struct specifier
 	int (*f)(va_list arg);
 } formats;
 
+int _strlen(char *s);
 void (*handle_format(char *specifier))(char *);
 int _printf(const char *format, ...);
 int _putchar(char c);
@@ -31,6 +32,6 @@ int (*get_writer(const char *format))(va_list);
 
 int write_c(va_list arg);
 int write_s(va_list arg);
-int write_percent(va_list arg);
+/*int write_percent(va_list arg);*/
 
 #endif
