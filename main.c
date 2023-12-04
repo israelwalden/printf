@@ -1,9 +1,11 @@
 #include "main.h"
 int main()
 {
-   int len;
-
-	 len = _printf("Hello world!\n");
-	printf("%d\n",len);
+   //int len;
+	char m = 'm';
+	// len = _printf("I am %c.", m);
+	//printf("I am %c.", m);
+	//printf("%d\n",len);
+	write(1, &m,1);
     return 0;
 }

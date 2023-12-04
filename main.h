@@ -9,20 +9,26 @@
 #include <unistd.h>
 
 /**
- * Specifier- Struct to hold specier and its function
+ * struct specifier - Struct to hold specier and its function
  * @type:char pointer
- * @f:pointer to a function that takes achar * 
+ * @f:pointer to a function that writes
+ *
+ * Description:
+ * This struct is used to hold a format specifier and
+ * a pointer to it a required write function.
  */
-
 typedef struct specifier
 {
 	char *type;
-	void (*f)(char *s);
-}format;
+	int (*f)(va_list arg);
+} formats;
 
 void (*handle_format(char *specifier))(char *);
-int _printf(const char * format, ...);
+int _printf(const char *format, ...);
+int _putchar(char c);
 
+int (*get_writer(const char *format))(va_list);
 
+int write_c(va_list arg);
 
 #endif

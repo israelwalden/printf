@@ -9,17 +9,33 @@
 int _printf(const char *format, ...)
 {
 	int count;
-	count  = 0;
+	int (*f)(va_list);
+
+	va_list varguments;
+
+	va_start(varguments, format);
+	count = 0;
 
 	while (*format != 0)
 	{
 		if (*format != '%')
 		{
-			write(1, format, 1);
+			_putchar(*format);
 			count++;
 		}
+		else
+		{
+			format++;
+			f = get_writer(format);
+			if (f != NULL)
+			{
+			/*printf("pointer is : %p", f);*/
+			f(varguments);
+			count += f(varguments);
+			}
+		}
 		format++;
-			
+
 	}
 	return (count);
 }
