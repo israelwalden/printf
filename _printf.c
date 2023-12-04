@@ -8,15 +8,14 @@
  */
 int _printf(const char *format, ...)
 {
-	int count;
+	unsigned int count = 0;
 	int (*f)(va_list);
 
 	va_list varguments;
 
 	va_start(varguments, format);
-	count = 0;
 
-	while (*format != 0)
+	while (*format != '\0')
 	{
 		if (*format != '%')
 		{
@@ -29,13 +28,12 @@ int _printf(const char *format, ...)
 			f = get_writer(format);
 			if (f != NULL)
 			{
-			/*printf("pointer is : %p", f);*/
-			//f(varguments);
 			count += f(varguments);
 			}
 		}
 		format++;
 
 	}
+	va_end(varguments);
 	return (count);
 }

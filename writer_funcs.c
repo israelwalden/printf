@@ -41,3 +41,14 @@ int write_s(va_list arg)
 	return (count);
 }
 
+/**
+ *write_percent - writes char to output stream.
+ * @arg: va_list argumnet
+ * Return: int number of elements printered
+ */
+int write_percent(va_list arg)
+{
+	int c = va_arg(arg, int);
+        write(1, "%%", 1);
+	return (1);
+}
