@@ -9,7 +9,8 @@ int (*get_writer(const char *format))(va_list args)
 	formats spec[] = {
 	{"c", write_c},
 	{"s", write_s},
-	/*{"%", write_percent},*/
+	{"d", write_i},
+	{"i", write_i},
 	{NULL, NULL}
 	};
 	int i;
