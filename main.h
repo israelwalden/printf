@@ -33,6 +33,7 @@ int (*get_writer(const char *format))(va_list);
 int write_c(va_list arg);
 int write_s(va_list arg);
 int write_i(va_list arg);
+int write_b(va_list arg);
 /*int write_percent(va_list arg);*/
 
 #endif
