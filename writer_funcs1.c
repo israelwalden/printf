@@ -74,24 +74,3 @@ int write_i(va_list arg)
 	count++;
 	return (count);
 }
-
-/**
-* write_u - writes unsigned int
-* @arg: va_list arg
-* Returns: int number of elements printed
-*/
-int write_u(va_list arg)
-{
-	/*unsigned int count, i;*/
-	unsigned int u;
-	char string[20];
-	char *us;
-	u = va_arg(arg, unsigned int);
-	/*printf("%u\n", u);*/
-	us = utoa(u, string, 10);
-
-	write(1, us,strlen(us));
-	return (strlen(us));
-
-
-}
