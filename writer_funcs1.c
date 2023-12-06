@@ -6,7 +6,7 @@
 **/
 int write_b(va_list arg)
 {
-	unsigned int binary[32];
+	unsigned int binary[64];
 	int i = 0;
 	unsigned int n = 0, count = 0;
 

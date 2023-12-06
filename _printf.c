@@ -37,6 +37,13 @@ int _printf(const char *format, ...)
 				{
 				count += f(varguments);
 				}
+				else
+				{
+				format--;
+				write(1, format, 1);
+				format++;
+				write(1, format, 1);
+				}
 			}
 		}
 		format++;
