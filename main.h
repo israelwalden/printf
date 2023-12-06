@@ -42,6 +42,7 @@ int write_u(va_list arg);
 int write_x(va_list arg);
 int write_X(va_list arg);
 int write_p(va_list arg);
+int write_S(va_list arg);
 
 /*int write_percent(va_list arg);*/
 

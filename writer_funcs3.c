@@ -46,3 +46,37 @@ int write_p(va_list arg)
 	write(1, paddress, idx);
 	return (idx);
 }
+
+/**
+ *write_S - writes char to output stream.
+ * @arg: va_list argumnet
+ * Return: int number of elements printered
+ */
+int write_S(va_list arg);
+{
+	int count
+	char *str;
+
+	count = 0;
+	str = va_arg(arg, char *);
+
+	if (*str == '\0')
+	{
+		str = "(null)";
+	}
+	while (str[count] != '\0')
+	{
+		if (int(str[count]) < 0 || (int)str[count] > 32 || (int)str[count] >= 127)
+		{
+			write(1, "\x", 1);
+			count++;
+		}
+		else
+		{
+		_putchar(str[count]);
+		count++;
+		}
+	}
+	return (count);
+
+}

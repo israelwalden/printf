@@ -1,0 +1,42 @@
+
+
+NAME 
+
+	_printf
+
+SYNOPSIS
+ 	_printf(const char *format, ...);
+
+DESCRIPTION
+	This is function that prints various datatypes.It takes format specifiers and a
+	varible number of arguments.
+
+Format Specifiers
+	This is a string of charaters.This format speecifier is not valid if it is not
+	empty.Being a string means it is enclosed in double quotation "".
+	
+	A charater is only used for formating if it is preceeded by a % ,else it is
+	printed a an ordinary character.The specifiers in the format string should
+	be arranged according to the order of arguments passed.
+
+	Format_speacifiers
+	%c : print charaacter argument.
+	%s : prints string argument.
+	%d : prints a decimal argument.
+	%i : prints a string argument.
+	%o : print an octal.
+	%b : print a binary
+	%x : prints a hexademinal(in small letters)
+	%X : prints a HEXADECIMAL(IN CAPITALS)
+	%p : prints a pointers
+
+RETURN
+	_printf returns the number of elements printed
+
+EXAMPLE
+	char * name = "Israel Walden";
+	_print("My name is %s.\n", name_var);
+
+
+	This statement returns
+	My name is Israel Walden.
