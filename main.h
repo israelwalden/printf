@@ -23,7 +23,7 @@ typedef struct specifier
 	int (*f)(va_list arg);
 } formats;
 
-int _strlen(char *s);
+/*int _strlen(char *s);*/
 void (*handle_format(char *specifier))(char *);
 int _printf(const char *format, ...);
 int _putchar(char c);

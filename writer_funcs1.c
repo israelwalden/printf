@@ -82,22 +82,16 @@ int write_i(va_list arg)
 */
 int write_u(va_list arg)
 {
-	unsigned int count, i;
+	/*unsigned int count, i;*/
 	unsigned int u;
 	char string[20];
-
+	char *us;
 	u = va_arg(arg, unsigned int);
-	utoa(u, string, 10);
-	i = 0,
-	count = 0;
+	/*printf("%u\n", u);*/
+	us = utoa(u, string, 10);
 
-	while (string[i] != '\0')
-	{
-		_putchar(string[i]);
-		i++;
-		count++;
-	}
-	return (count);
+	write(1, us,strlen(us));
+	return (strlen(us));
 
 
 }
