@@ -28,6 +28,7 @@ void (*handle_format(char *specifier))(char *);
 int _printf(const char *format, ...);
 int _putchar(char c);
 char *utoa(unsigned int u, char *buf, int radix);
+char *utoa2(unsigned int u, char *buf, int radix);
 
 int (*get_writer(const char *format))(va_list);
 
@@ -35,7 +36,10 @@ int write_c(va_list arg);
 int write_s(va_list arg);
 int write_i(va_list arg);
 int write_b(va_list arg);
+int write_o(va_list arg);
 int write_u(va_list arg);
+int write_x(va_list arg);
+int write_X(va_list arg);
 
 /*int write_percent(va_list arg);*/
 
