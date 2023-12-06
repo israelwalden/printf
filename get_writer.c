@@ -16,6 +16,7 @@ int (*get_writer(const char *format))(va_list args)
 	{"o", write_o},
 	{"x", write_x},
 	{"X", write_X},
+	{"p", write_p},
 	{NULL, NULL}
 	};
 	int i;

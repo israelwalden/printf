@@ -7,6 +7,7 @@
 #include <string.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdint.h>
 
 /**
  * struct specifier - Struct to hold specier and its function
@@ -40,6 +41,7 @@ int write_o(va_list arg);
 int write_u(va_list arg);
 int write_x(va_list arg);
 int write_X(va_list arg);
+int write_p(va_list arg);
 
 /*int write_percent(va_list arg);*/
 
