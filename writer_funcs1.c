@@ -22,6 +22,7 @@ int write_b(va_list arg)
 	{
 		binary[i] = n % 2;
 		n = n / 2;
+		printf("%d", n);
 		i++;
 	}
 	for (i = i - 1; i >= 0; i--)

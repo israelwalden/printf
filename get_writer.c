@@ -11,6 +11,7 @@ int (*get_writer(const char *format))(va_list args)
 	{"s", write_s},
 	{"d", write_i},
 	{"i", write_i},
+	{"b", write_b},
 	{"u", write_u},
 	{"o", write_o},
 	{"x", write_x},
